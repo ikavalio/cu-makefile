@@ -36,7 +36,7 @@ work/cu.txt: work/cu.blif $(constraints)
 	$(arachne_bin) -d 8k -P cb132 -o $@ -p $(constraints) $<
 
 work/cu.bin: $(bin_dep)
-	$(icepack_bin) $(bin_dep) $@
+	$(icepack_bin) $< $@
 
 .PHONY: build
 build: work/cu.bin
